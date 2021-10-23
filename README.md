@@ -1,3 +1,78 @@
+## Blog rest api
+
+laravel new rest_api
+  
+    cd rest_api
+ 
+    php artisan serve
+    
+    php artisan make:controller Api\\AuthController
+    php artisan make:model Category -m
+    php artisan make:model Blog -m
+   
+    php artisan make:controller Api\\BlogController
+    
+    
+    php artisan make:model Comment -m
+    
+
+    php artisan make:controller Api\\CommentController
+    php artisan make:model BlogLike -m
+    
+    
+    php artisan make:controller Api\\ProfileController
+    php artisan make:migration add_some_columns_to_users_table --table=users
+    php artisan migrate
+  
+### Register User
+   http://127.0.0.1:8000/api/auth/register
+
+### Login User
+   http://127.0.0.1:8000/api/auth/login
+
+### User Fetch Record
+   http://127.0.0.1:8000/api/auth/user
+
+### Logout
+   http://127.0.0.1:8000/api/auth/logout
+
+### Create New Blog 
+   http://127.0.0.1:8000/api/blogs/create
+
+### Get Specific blog Id
+   http://127.0.0.1:8000/api/blogs/10
+
+### Update blog
+   http://127.0.0.1:8000/api/blogs/7/update
+
+### Delete blog
+   http://127.0.0.1:8000/api/blogs/7/delete
+
+### Get all blogs
+   http://127.0.0.1:8000/api/blogs
+
+### New Comment create
+   http://127.0.0.1:8000/api/blogs/10/comments/create
+
+### Update Comment
+   http://127.0.0.1:8000/api/comments/6/update
+
+### Delete Comment
+   http://127.0.0.1:8000/api/comments/7/delete
+
+### Like/Dislike blog 
+   http://127.0.0.1:8000/api/blogs/10/toggle-like
+
+### Like Count Blog
+   http://127.0.0.1:8000/api/blogs?sortBy=likes_count&sortOrder=desc&paginate=2&perPage=2
+
+### Profile Change password
+   http://127.0.0.1:8000/api/profile/change-password
+
+### Profile information update
+   http://127.0.0.1:8000/api/profile/update-profile
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
