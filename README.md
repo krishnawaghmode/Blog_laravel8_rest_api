@@ -1,4 +1,4 @@
-## Blog rest api
+## Blog REST API Laravel 8
 
 laravel new rest_api
   
